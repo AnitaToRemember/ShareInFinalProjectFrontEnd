@@ -21,7 +21,7 @@ function FilterPage() {
         const filteredAndSortedPosts = filterPosts(sortedPosts, keyword);
         setFilteredPosts(filteredAndSortedPosts);
       } catch (error) {
-        console.error("Error fetching filtered posts:", error);
+        alert.error("Error fetching filtered posts:", error);
       } finally {
         setLoading(false);
       }

@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../context/AuthContext";
-import { linksServices } from "../services";
+import { removeLinkService } from "../services/links";
 
 
 function useDeleteLink() {
@@ -8,10 +8,8 @@ function useDeleteLink() {
 	const [error, setError] = useState("");
 
 	const deleteLink = async (linkId, onSuccess) => {
-		{console.log(`2. to know what is ${linkId}  `)}
-
 		try {
-			await linksServices.deleteLinkService({ linkId, token });
+			await removeLinkService({ linkId, token });
 
 			if (onSuccess) {
 				onSuccess(linkId);

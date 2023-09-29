@@ -3,7 +3,7 @@ import { AuthContext } from "../context/AuthContext";
 import UserLinks from "../components/UserLinks";
 import "../styles/pages/MyLinks.css"
 import Auth from '../components/Auth'
-import { linksServices } from "../services";
+import { getUserLinksService } from "../services/links";
 
 function MyLinks() { 
 	const { user, token } = useContext(AuthContext);
@@ -17,11 +17,11 @@ function MyLinks() {
 		try {
 			if (user) {
 				// Only fetch user posts if the user is authenticated
-				const data = await linksServices.getUserLinksService(token);
+				const data = await getUserLinksService(token);
 				setUserPosts(data.links);
 			}
 		} catch (error) {
-			console.error("Error fetching user posts:", error);
+			alert.error("Error fetching user posts:", error);
 		} finally {
 			setLoading(false);
 		}
