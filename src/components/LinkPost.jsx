@@ -18,8 +18,8 @@ function LinkPost ({ link, removeLink }) {
   };
   
   return (
-    <section className="list-all-links">
-      <div className="link-post">
+    <section className="list-all-links" >
+      <div className="link-post" >
         <h2 className="title">
           {link.title}
         </h2>

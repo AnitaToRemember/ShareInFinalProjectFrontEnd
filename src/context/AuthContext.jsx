@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { userServices } from "../services";
+import { getMyUserDataService } from "../services/user";
 
 export const AuthContext = createContext();
 
@@ -14,7 +14,7 @@ export const AuthProvideComponent = ({ children }) => {
   useEffect(() => {
     const getUserData = async () => {
       try {
-        const data = await userServices.getMyUserDataService({token})
+        const data = await getMyUserDataService({token})
         setUser(data.user)
       } catch (error) {
         logout();
