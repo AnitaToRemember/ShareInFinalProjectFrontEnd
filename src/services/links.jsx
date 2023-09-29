@@ -15,9 +15,9 @@ export const getAllLinksService = async () => {
     return json.data;
   };
   
-  export const getSingleLinkService = async ({ linkId }) => {
+  export const getSingleLinkService = async (id) => {
     const response = await fetch(
-      `${import.meta.env.VITE_APP_BACKEND}/links/${linkId}`,
+      `${import.meta.env.VITE_APP_BACKEND}/links/${id}`,
       {
         method: "GET",
         headers: {
@@ -68,9 +68,9 @@ export const getAllLinksService = async () => {
     return json.data;
   };
   
-  export const deleteLinkService = async ({ linkId, token }) => {
+  export const removeLinkService = async ({ id, token }) => {
     const response = await fetch(
-      `${import.meta.env.VITE_APP_BACKEND}/links/${linkId}`,
+      `${import.meta.env.VITE_APP_BACKEND}/links/${id}`,
       {
         method: "DELETE",
         headers: {

@@ -1,7 +1,6 @@
 import { useContext, useState } from "react"
 import { AuthContext } from "../context/AuthContext"
 import "../styles/components/NewLink.css"
-import { linksServices } from "../services"
 
 function NewLink ({ addLink }) {
     const { token } = useContext(AuthContext)
@@ -14,9 +13,8 @@ function NewLink ({ addLink }) {
     try {
         setLoading(true)
         const data = new FormData(e.target)
-        const link = await linksServices.sendLinkService({ data, token })
-
-        addLink(link)
+        //const link = await linksServices.sendLinkService({ data, token })
+        addLink( data, token )
 
         e.target.reset()
     } catch (error) {

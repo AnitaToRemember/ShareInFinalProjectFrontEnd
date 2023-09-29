@@ -6,21 +6,20 @@ import "../styles/components/LinkPost.css"
 import useDeleteLink from "../hooks/useDeleteLink";
 
 function LinkPost ({ link, removeLink }) {
-  
-  const navigate = useNavigate();
-  const { user } = useContext(AuthContext);
-  const { deleteLink} = useDeleteLink();
+  //const navigate = useNavigate();
+  const { user, token } = useContext(AuthContext);
+  //const { deleteLink} = useDeleteLink();
   const [error, setError] = useState("");
   const handleDeleteClick = async () => {
     if (window.confirm("Are you sure?")) {
       try {
-        await deleteLink(link.id, () => {
+        await removeLink(link.id, token)
+        /*await deleteLink(link.id, () => {
           if(removeLink) {
             removeLink(link.id)
           }
-        navigate("/home");
-        })
-      } catch (error) {
+        navigate("/home");*/
+        } catch (error) {
         setError(error.message);
       }
     }
@@ -46,7 +45,7 @@ function LinkPost ({ link, removeLink }) {
         </span>
         
         <span className="votes">
-          <StarRating  value={link.votes} linkId={link.id}/>
+          <StarRating  value={link.votes} linkId={link.id} link={link}/>
         </span> 
 
         <Link to={`/links/${link.id}`} className="date">
