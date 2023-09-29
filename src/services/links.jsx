@@ -15,9 +15,9 @@ export const getAllLinksService = async () => {
     return json.data;
   };
   
-  export const getSingleLinkService = async ({ linkId }) => {
+  export const getSingleLinkService = async (id) => {
     const response = await fetch(
-      `${import.meta.env.VITE_APP_BACKEND}/links/${linkId}`,
+      `${import.meta.env.VITE_APP_BACKEND}/links/${id}`,
       {
         method: "GET",
         headers: {
