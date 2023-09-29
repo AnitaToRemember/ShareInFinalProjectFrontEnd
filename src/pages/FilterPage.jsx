@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import LinkPost from "../components/LinkPost";
 import "../styles/pages/FilterPage.css"; 
 import Auth from '../components/Auth'
-import { utilitiesServices } from "../services";
+import { filterService } from "../services/utilities";
 
 function FilterPage() {
   const [sortBy, setSortBy] = useState("votes"); 
@@ -14,7 +14,7 @@ function FilterPage() {
     async function fetchFilteredPosts() {
       setLoading(true);
       try {
-        const data = await utilitiesServices.filterService(sortBy, keyword);
+        const data = await filterService(sortBy, keyword);
         // Sort the posts based on the selected sortBy value
         const sortedPosts = sortPosts(data.links, sortBy);
         // Filter the sorted posts based on the keyword

@@ -13,7 +13,6 @@ function NewLink ({ addLink }) {
     try {
         setLoading(true)
         const data = new FormData(e.target)
-        //const link = await linksServices.sendLinkService({ data, token })
         addLink( data, token )
 
         e.target.reset()

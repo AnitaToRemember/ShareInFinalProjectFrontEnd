@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import { utilitiesServices } from "../services";
 import { AuthContext } from "../context/AuthContext"; // Import the AuthContext
+import { starRatingService } from "../services/utilities";
 
 function StarRating({ value, linkId, link }) {
   const [hoveredValue, setHoveredValue] = useState(null);
@@ -22,7 +22,7 @@ function StarRating({ value, linkId, link }) {
       }
   
       // Pass the user's token to the service function
-      await utilitiesServices.starRatingService(clickedValue, linkId, token);
+      await starRatingService(clickedValue, linkId, token);
 
       // Update the selectedValue state after a successful vote
       setSelectedValue(clickedValue);

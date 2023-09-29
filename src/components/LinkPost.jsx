@@ -5,19 +5,12 @@ import StarRating from "./StarRating";
 import "../styles/components/LinkPost.css"
 
 function LinkPost ({ link, removeLink }) {
-  //const navigate = useNavigate();
   const { user, token } = useContext(AuthContext);
-  //const { deleteLink} = useDeleteLink();
   const [error, setError] = useState("");
   const handleDeleteClick = async () => {
     if (window.confirm("Are you sure?")) {
       try {
         await removeLink(link.id, token)
-        /*await deleteLink(link.id, () => {
-          if(removeLink) {
-            removeLink(link.id)
-          }
-        navigate("/home");*/
         } catch (error) {
         setError(error.message);
       }

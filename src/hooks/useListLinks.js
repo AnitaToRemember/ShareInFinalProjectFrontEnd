@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react"
-import { linksServices } from "../services"
-import { getAllLinksService, removeLinkService, sendLinkService } from "../services/links"
+import { getAllLinksService, getUserLinksService, removeLinkService, sendLinkService } from "../services/links"
 
 function useListLinks(token) {
 		const [links, setLinks] = useState([])
@@ -12,8 +11,8 @@ function useListLinks(token) {
 					try {
 						setLoading(true);
 						const data = token
-							? await linksServices.getUserLinksService(token)
-							: await linksServices.getAllLinksService()
+							? await getUserLinksService(token)
+							: await getAllLinksService()
 		
 						setLinks(data.links)
 					} catch (error) {
@@ -37,8 +36,6 @@ function useListLinks(token) {
 				await removeLinkService({id, token})
 				const allNewLinks = await getAllLinksService()
 				setLinks(allNewLinks.links);
-				/*console.log('Removing link with id:', id);
-				setLinks((prevLinks) => prevLinks.filter((link) => link.id !== id));*/
 			};
 		
 			return { links, error, loading, addLink, removeLink }
