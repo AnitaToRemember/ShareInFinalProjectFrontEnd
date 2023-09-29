@@ -32,6 +32,7 @@ function useListLinks(token) {
 			};
 		
 			const removeLink = async (id, token) => {
+				console.log(id);
 				await removeLinkService({id, token})
 				const allNewLinks = await getAllLinksService()
 				setLinks(allNewLinks.links);

@@ -11,13 +11,13 @@ function StarRating({ value, linkId, link }) {
     try {
       if (!user) {
         // Handle the case where the user is not authenticated (you can display a message or redirect to login)
-        alert("User is not authenticated.");
+        console.error("User is not authenticated.");
         return;
       }
   
       if (user && link && user.id === link.userId ) {
         // Notify the user that they cannot like their own post
-        alert("You cannot like your own post.");
+        console.error("You cannot like your own post.");
         return;
       }
   
@@ -27,13 +27,13 @@ function StarRating({ value, linkId, link }) {
       // Update the selectedValue state after a successful vote
       setSelectedValue(clickedValue);
     } catch (error) {
-      alert("Error while voting:" , error);
+      console.error("Error while voting:" , error);
     }
   };
   
 
   return (
-    <section className="starRating">
+    <div className="starRating">
       {[1, 2, 3, 4, 5].map((starValue) => (
         <span
           key={starValue}
@@ -44,7 +44,7 @@ function StarRating({ value, linkId, link }) {
           {starValue <= (hoveredValue || selectedValue || value) ? "⭐" : "☆"}
         </span>
       ))}
-    </section>
+    </div>
   );
 }
 
