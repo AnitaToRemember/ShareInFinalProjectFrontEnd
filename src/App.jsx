@@ -44,8 +44,6 @@ function App() {
       </Routes>
       {/* Conditional rendering of NavigationBar if user is authenticated */}
       {user ? <NavigationBar /> : null}
-      {/* SwitchMode component for dark mode toggle */}
-      <SwitchMode />
     </main>
   );
 }

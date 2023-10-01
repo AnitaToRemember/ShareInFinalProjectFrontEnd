@@ -13,7 +13,6 @@ function HomePage() {
 	const { links, error, loading, addLink, removeLink } = useListLinks();
 	// Destructuring the user from the authentication context
 	const { user } = useContext(AuthContext);
-
 	// Conditional rendering based on loading and error states
 	if (loading) return <Loading />;
 	if (error) return <ErrorMessage message={error} />;

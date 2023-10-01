@@ -7,7 +7,6 @@ import "../styles/components/Auth.css";
 const Auth = () => {
   // Destructuring user and logout function from the authentication context
   const { user, logout } = useContext(AuthContext);
-
   // JSX for rendering the component based on user authentication status
   return user ? (
     // Displaying information for logged-in users

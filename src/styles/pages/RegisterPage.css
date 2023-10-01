@@ -51,6 +51,7 @@ input {
   border-radius: 4px;
   background-color: #f5f8fa; /* Light gray background color for input fields */
   color: #333; /* Dark gray text color */
+  align-items: center;
 }
 
 /* Style for the form submission button */

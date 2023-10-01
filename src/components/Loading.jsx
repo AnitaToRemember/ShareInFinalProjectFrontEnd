@@ -1,7 +1,8 @@
 import '../styles/components/Loading.css';
 
-function Loading () {
-    return <p className="loading">Loading...</p>
-  }
+// Loading component displays a simple loading message to indicate that content is being loaded.
+function Loading() {
+    return <p className="loading">Loading...</p>;
+}
 
-export default Loading
+export default Loading;

@@ -10,8 +10,8 @@ body.dark-mode {
 }
 
 /* Styles for h2 headings in light mode */
-h2 {
-  color: #333;
+.link-post .title {
+  color: #ffffff;
 }
 
 /* Styles for h2 headings in dark mode */
