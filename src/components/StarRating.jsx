@@ -1,39 +1,48 @@
 import { useState, useContext } from "react";
-import { AuthContext } from "../context/AuthContext"; // Import the AuthContext
+import { AuthContext } from "../context/AuthContext";
 import { starRatingService } from "../services/utilities";
 
+// Functional component for rendering a star rating
 function StarRating({ value, linkId, link }) {
+  // State for the currently hovered star value
   const [hoveredValue, setHoveredValue] = useState(null);
+  // State for the selected star value
   const [selectedValue, setSelectedValue] = useState(null); 
-  const { user, token } = useContext(AuthContext); // Get the user context
+  // State for displaying error messages related to star rating
+  const [errorMessage, setErrorMessage] = useState('');
+  // Destructuring user and token from the authentication context
+  const { user, token } = useContext(AuthContext);
 
+  // Function to handle a star click
   const handleStarClick = async (clickedValue) => {
     try {
+      // Check if the user is not authenticated
       if (!user) {
-        // Handle the case where the user is not authenticated (you can display a message or redirect to login)
-        console.error("User is not authenticated.");
+        setErrorMessage("User is not authenticated.");
         return;
       }
-  
+
+      // Check if the user is trying to like their own post
       if (user && link && user.id === link.userId ) {
-        // Notify the user that they cannot like their own post
-        console.error("You cannot like your own post.");
+        setErrorMessage("You cannot like your own post.");
         return;
       }
-  
-      // Pass the user's token to the service function
+
+      // Call the star rating service function with the clicked value and user token
       await starRatingService(clickedValue, linkId, token);
 
       // Update the selectedValue state after a successful vote
       setSelectedValue(clickedValue);
     } catch (error) {
-      console.error("Error while voting:" , error);
+      // Set an error message in case of voting failure
+      setErrorMessage("Error while voting:", error);
     }
   };
-  
 
+  // JSX for rendering the star rating component
   return (
     <div className="starRating">
+      {/* Mapping through star values and rendering each star */}
       {[1, 2, 3, 4, 5].map((starValue) => (
         <span
           key={starValue}
@@ -41,9 +50,12 @@ function StarRating({ value, linkId, link }) {
           onMouseEnter={() => setHoveredValue(starValue)}
           onMouseLeave={() => setHoveredValue(null)}
         >
+          {/* Displaying a filled star if it's less than or equal to the current value */}
           {starValue <= (hoveredValue || selectedValue || value) ? "⭐" : "☆"}
         </span>
       ))}
+      {/* Displaying an error message if there's any */}
+      {errorMessage && <p className="error"> {errorMessage} </p>}
     </div>
   );
 }

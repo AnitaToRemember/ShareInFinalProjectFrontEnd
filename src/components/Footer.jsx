@@ -11,4 +11,4 @@ const Footer = () => {
 
 export default Footer
 
-//VER DESPUES CON ANA: Luego debemos agregar el footer cuando la pantalla sea mas grande y dejar el navegador inferior solo cuando sea una pantalla mas pequeña o movil.
+//this will be used in the future.
