@@ -30,7 +30,7 @@ function LinkPost({ link, removeLink }) {
     <section className="list-all-links">
       <div className="link-post">
         {/* Displaying the link title */}
-        <h2 className="title">
+        <h2 className="title-post">
           {link.title}
         </h2>
 

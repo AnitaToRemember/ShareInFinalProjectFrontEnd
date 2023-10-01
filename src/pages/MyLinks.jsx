@@ -53,7 +53,7 @@ function MyLinks() {
                     {/* Title for the user's links */}
                     <h2 className="user-title">
                         {user
-                            ? `Links posted by: ${user.username}`
+                            ? `Links posted by: @${user.username}`
                             : 'Please log in to see your links.'}
                     </h2>
                     {/* Mapping over user posts and rendering UserLinks component for each link */}

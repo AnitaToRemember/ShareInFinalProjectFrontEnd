@@ -72,7 +72,7 @@ body.dark-mode form.new-link {
   appearance: none;
   width: 40px;
   height: 20px;
-  background-color: rgba(0, 147, 255, 1);
+  background-color: #0093FF;
   border-radius: 20px;
   position: relative;
   cursor: pointer;
