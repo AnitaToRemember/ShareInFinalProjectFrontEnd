@@ -2,7 +2,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import "../styles/pages/RegisterPage.css";
 import { Link } from "react-router-dom";
-import { authServices } from "../services/index";
+import { changePasswordService } from "../services/auth";
 
 const ChangePasswordPage = () => {
   const { token } = useContext(AuthContext);
@@ -21,7 +21,7 @@ const ChangePasswordPage = () => {
     }
 
     try {
-      await authServices.changePasswordService({ oldPassword: oldPass, newPassword: pass1, token });
+      await changePasswordService({ oldPassword: oldPass, newPassword: pass1, token });
       setMessage("Password changed successfully");
     } catch (error) {
       setMessage(error.message);

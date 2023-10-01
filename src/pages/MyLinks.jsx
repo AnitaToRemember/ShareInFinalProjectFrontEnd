@@ -3,7 +3,7 @@ import { AuthContext } from "../context/AuthContext";
 import UserLinks from "../components/UserLinks";
 import "../styles/pages/MyLinks.css"
 import Auth from '../components/Auth'
-import { linksServices } from "../services";
+import { getUserLinksService } from "../services/links";
 
 // Functional component for MyLinks page
 function MyLinks() { 
@@ -21,7 +21,7 @@ function MyLinks() {
 			try {
 				// Fetching user posts if the user is authenticated
 				if (user) {
-					const data = await linksServices.getUserLinksService(token);
+					const data = await getUserLinksService(token);
 					setUserPosts(data.links);
 				}
 			} catch (error) {

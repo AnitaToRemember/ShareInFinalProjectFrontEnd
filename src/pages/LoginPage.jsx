@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
-import { authServices} from "../services/index";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
 import { Link } from "react-router-dom";
+import { loginUserService } from "../services/auth";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ const LoginPage = () => {
     setError("");
 
     try {
-      const token = await authServices.loginUserService({ email, password });
+      const token = await loginUserService({ email, password });
       login(token);
       navigate("/home");
     } catch (error) {

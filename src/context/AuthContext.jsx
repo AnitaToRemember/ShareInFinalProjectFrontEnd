@@ -1,7 +1,7 @@
 // Importing createContext, useEffect, and useState hooks from React
 import { createContext, useEffect, useState } from "react";
 // Importing userServices from the services module
-import { userServices } from "../services";
+
 
 // Creating an authentication context
 export const AuthContext = createContext();
@@ -23,7 +23,7 @@ export const AuthProvideComponent = ({ children }) => {
     const getUserData = async () => {
       try {
         // Fetching user data using the token
-        const data = await userServices.getMyUserDataService({ token });
+        const data = await getMyUserDataService({ token });
         // Setting user information in the state
         setUser(data.user);
       } catch (error) {

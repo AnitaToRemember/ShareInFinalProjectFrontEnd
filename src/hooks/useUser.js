@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { userServices } from "../services";
+import { getMyUserDataService } from "../services/user";
 
 // Custom hook for fetching and managing user data
 function useUser(id) {
@@ -17,7 +17,7 @@ function useUser(id) {
 				// Setting loading to true before fetching user data
 				setLoading(true);
 				// Fetching user data using the provided id
-				const data = await userServices.getMyUserDataService(id);
+				const data = await getMyUserDataService(id);
 				// Setting the user data in the state
 				setUser(data);
 			} catch (error) {

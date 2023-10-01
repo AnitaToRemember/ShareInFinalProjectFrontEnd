@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "../styles/pages/RegisterPage.css";
-import { authServices } from "../services";
+import { registerUserService } from "../services/auth";
 
 
 const RegisterPage = () => {
@@ -22,7 +22,7 @@ const RegisterPage = () => {
     }
 
     try {
-      await authServices.registerUserService({ userName, email, password: pass1 });
+      await registerUserService({ userName, email, password: pass1 });
 
       navigate("/");
     } catch (error) {
