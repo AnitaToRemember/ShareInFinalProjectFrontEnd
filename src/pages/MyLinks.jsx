@@ -5,53 +5,65 @@ import "../styles/pages/MyLinks.css"
 import Auth from '../components/Auth'
 import { linksServices } from "../services";
 
+// Functional component for MyLinks page
 function MyLinks() { 
+	// Destructuring user and token from AuthContext
 	const { user, token } = useContext(AuthContext);
+	// State to store user posts and loading state
 	const [userPosts, setUserPosts] = useState([]);
 	const [loading, setLoading] = useState(false);
 
-
+	// useEffect to fetch user posts when the component mounts or user/token changes
 	useEffect(() => {
 		async function fetchUserPosts() {
-		setLoading(true);
-		try {
-			if (user) {
-				// Only fetch user posts if the user is authenticated
-				const data = await linksServices.getUserLinksService(token);
-				setUserPosts(data.links);
+			// Setting loading state to true before fetching user posts
+			setLoading(true);
+			try {
+				// Fetching user posts if the user is authenticated
+				if (user) {
+					const data = await linksServices.getUserLinksService(token);
+					setUserPosts(data.links);
+				}
+			} catch (error) {
+				// Handling and logging errors if fetching user posts fails
+				console.error("Error fetching user posts:", error);
+			} finally {
+				// Setting loading state to false after fetching user posts
+				setLoading(false);
 			}
-		} catch (error) {
-			console.error("Error fetching user posts:", error);
-		} finally {
-			setLoading(false);
 		}
-	}
-	
+		
+		// Calling the fetchUserPosts function
 		fetchUserPosts();
 	}, [user, token]);
-	
-		return (
-			<div>		
-				<header>
-					<Auth />
-				</header>
 
-				{loading ? (
-		<p className="my-links-loading">Loading...</p>
-	) : (
-		<div className="all-links">
-			<h2 className="user-title">
-			{user ? `Links posted by: ${user.username}` : "Please log in to see your links."}
-		</h2>
-		{userPosts.map((link) => (
-			<li key={link.id} className="user-link">
-			<UserLinks token={token} />
-			</li>
-		))}
+	// JSX for rendering MyLinks page
+	return (
+		<div>		
+			{/* Header section with authentication component */}
+			<header>
+				<Auth />
+			</header>
+
+			{/* Conditional rendering based on loading state */}
+			{loading ? (
+				<p className="my-links-loading">Loading...</p>
+			) : (
+				<div className="all-links">
+					{/* Title for the user's links */}
+					<h2 className="user-title">
+						{user ? `Links posted by: ${user.username}` : "Please log in to see your links."}
+					</h2>
+					{/* Mapping over user posts and rendering UserLinks component for each link */}
+					{userPosts.map((link) => (
+						<li key={link.id} className="user-link">
+							<UserLinks token={token} />
+						</li>
+					))}
+				</div>
+			)}
 		</div>
-	)}
-	</div>
-);
+	);
 }
 
-export default MyLinks
+export default MyLinks;
