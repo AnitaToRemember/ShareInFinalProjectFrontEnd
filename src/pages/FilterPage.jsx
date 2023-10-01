@@ -1,60 +1,28 @@
-import { useEffect, useState } from "react";
-import LinkPost from "../components/LinkPost";
-import "../styles/pages/FilterPage.css"; 
-import Auth from '../components/Auth'
-import { filterService } from "../services/utilities";
+import { useState } from 'react';
+import useFilteredPosts from '../hooks/useFilteredPosts';
+import LinkPost from '../components/LinkPost';
+import '../styles/pages/FilterPage.css';
+import Auth from '../components/Auth';
 
+// Functional component for the FilterPage
 function FilterPage() {
-  const [sortBy, setSortBy] = useState("votes"); 
-  const [keyword, setKeyword] = useState(""); 
-  const [filteredPosts, setFilteredPosts] = useState([]);
-  const [loading, setLoading] = useState(false);
+  // State to track sortBy and keyword
+  const [sortBy, setSortBy] = useState('votes');
+  const [keyword, setKeyword] = useState('');
 
-  useEffect(() => {
-    async function fetchFilteredPosts() {
-      setLoading(true);
-      try {
-        const data = await filterService(sortBy, keyword);
-        // Sort the posts based on the selected sortBy value
-        const sortedPosts = sortPosts(data.links, sortBy);
-        // Filter the sorted posts based on the keyword
-        const filteredAndSortedPosts = filterPosts(sortedPosts, keyword);
-        setFilteredPosts(filteredAndSortedPosts);
-      } catch (error) {
-        console.error("Error fetching filtered posts:", error);
-      } finally {
-        setLoading(false);
-      }
-    }
+  // Use the custom hook to get filtered posts and loading state
+  const { filteredPosts, loading } = useFilteredPosts(sortBy, keyword);
 
-    fetchFilteredPosts();
-  }, [sortBy, keyword]);
-
-  // Function to sort the posts based on sortBy value
-  const sortPosts = (posts, sortBy) => {
-    return [...posts].sort((a, b) => {
-      if (sortBy === "date") {
-        return new Date(b.createdAt) - new Date(a.createdAt);
-      } else if (sortBy === "votes") {
-        return b.votes - a.votes;
-      }
-      return 0;
-    });
-  };
-
-  // Function to filter posts based on keyword
-  const filterPosts = (posts, keyword) => {
-    return posts.filter((post) =>
-      post.title.toLowerCase().includes(keyword.toLowerCase())
-    );
-  };
-
+  // JSX for rendering the FilterPage
   return (
     <div className="filter-container">
+      {/* Header section with authentication component */}
       <header>
         <Auth />
       </header>
+      {/* Title for the FilterPage */}
       <h2 className="filter-title">Filter Posts</h2>
+      {/* Select input for sorting posts */}
       <div className="filter-select-container">
         <label htmlFor="sortBy" className="filter-label">
           Sort by:
@@ -69,6 +37,7 @@ function FilterPage() {
           <option value="votes">Rating</option>
         </select>
       </div>
+      {/* Input for filtering posts by keyword */}
       <div className="filter-input-container">
         <label htmlFor="keyword" className="filter-label">
           Filter by Keyword:
@@ -82,12 +51,14 @@ function FilterPage() {
         />
       </div>
 
+      {/* Loading message or list of filtered posts */}
       {loading ? (
         <p className="filter-loading">Loading...</p>
       ) : (
         <ul className="filter-post-list">
           {filteredPosts.map((link) => (
             <li key={link.id} className="filter-post-item">
+              {/* Rendering LinkPost component for each filtered link */}
               <LinkPost link={link} />
             </li>
           ))}
