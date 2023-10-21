@@ -25,11 +25,13 @@ function SwitchMode() {
 
   // JSX for rendering the switch mode component
   return (
-    <div className="switch-mode">
-      <label>
-        <input type="checkbox" checked={isDarkMode} onChange={toggleMode} />
-        <span>{buttonText}</span>
-      </label>
+    <div className="switch-mode-container">
+      <div className="switch-mode">
+        <label>
+          <input type="checkbox" checked={isDarkMode} onChange={toggleMode} />
+          <span>{buttonText}</span>
+        </label>
+      </div>
     </div>
   );
 }

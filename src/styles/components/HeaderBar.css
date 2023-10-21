@@ -7,6 +7,9 @@
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.2);
   height: 85px;
   width: 100vw;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .header-logo {

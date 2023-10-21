@@ -1,4 +1,10 @@
 /* Styles for light mode (default) */
+.switch-mode-container {
+  position: sticky;
+  bottom: 10px;
+  right: 10px;
+}
+
 .switch-mode {
   font-size: 5px;
 }
@@ -57,14 +63,14 @@ body.dark-mode form.new-link {
 /* Specific styles for the switch */
 
 .switch-mode label {
-  position: fixed;
   top: 90px;
   left: 0px;
-  margin: 5px; /* Ajusta el margen según sea necesario */
+  margin: 5px; 
   display: flex;
   align-items: center;
   gap: 8px;
-  z-index: 9999; /* Asegura que esté en la parte superior de la página */
+  z-index: 9999; 
+  font-size: large;
 }
 
 /* Styles for the switch itself */

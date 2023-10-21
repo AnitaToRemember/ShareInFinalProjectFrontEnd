@@ -1,4 +1,11 @@
 /* Auth Styles */
+.auth-container {
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 999; /* Ensure it's on top of other elements */
+}
+
 .auth-buttons {
 	color: var(--white); 
 	background-color: var(--logoText); 
@@ -17,7 +24,8 @@
 }
 
 .logged-user {
-	position: fixed;
+	display: flex;
+	align-items: center;
 	top: 10px;
 	right: 10px;
 	padding: 10px 20px;
