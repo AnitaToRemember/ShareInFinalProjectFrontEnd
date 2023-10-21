@@ -83,15 +83,15 @@ const RegisterPage = () => {
                     />
                 </fieldset>
 
-                <button>Register</button>
-                {error ? <p>{error}</p> : null}
+                <button className="register-button">Register</button>
+                {error ? <p className="error-message">{error}</p> : null}
             </form>
 
             <div>
                 <h3>
-                    Already have an account? <Link to="/">Log in</Link>
+                    Already have an account? <Link to="/" className="login-link">Log in</Link>
                 </h3>
-                <Link to="/home">Continue as a guest</Link>
+                <Link to="/home" className="guest-link">Continue as a guest</Link>
             </div>
         </section>
     );

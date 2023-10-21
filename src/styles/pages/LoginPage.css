@@ -1,0 +1,143 @@
+/* Styles for the login form*/
+
+/* Center-align the entire section and add some padding */
+.login-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Style for the main heading */
+.login-form-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #1da1f2; 
+}
+
+/* Style for the secondary heading */
+.login-form-container h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333; /* Dark gray color for secondary heading */
+}
+
+/* Style for the form container */
+.login-form-container form {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Style for form fieldsets (grouping of related form elements) */
+.login-form-container fieldset {
+    margin-bottom: 20px;
+    border: none; /* Remove borders around fieldsets */
+}
+
+/* Style for form labels */
+.login-form-container label {
+    display: none; /* Hide labels visually while keeping them accessible */
+}
+
+/* Style for form input fields */
+.login-form-container input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #1da1f2; 
+    border-radius: 4px;
+    background-color: #f5f8fa; /* Light gray background color for input fields */
+    color: #1da1f2; 
+}
+
+/* Style for the "Forgotten password?" link */
+.login-form-container div {
+    text-align: center; /* Center-align the text */
+    margin-bottom: 15px; /* Adjust the bottom margin as needed */
+}
+
+.login-form-container div a.forgot-password-link {
+    text-decoration: none;
+    color: #1da1f2; 
+    display: block; /* Set to block to allow text-align to work */
+}
+
+/* Hover effect for the "Forgotten password?" link */
+.login-form-container div a.forgot-password-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Style for the form submission button */
+.login-form-container button.register-button {
+    background-color: #1da1f2; 
+    color: #fff; /* White text color */
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+.login-form-container button.register-button:hover {
+    background-color: #0c8de8; /* Darker blue background on hover */
+}
+
+/* Style for paragraphs within the form */
+.login-form-container p.error-message {
+    color: #ff0000; /* Red color for error messages */
+    margin-top: 10px;
+}
+
+/* Style for the "Don’t have an account?" and "Continue as a guest" links */
+.login-form-container h4,
+.login-form-container div a:last-child {
+    font-size: 16px;
+    color: #1da1f2; 
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+/* Hover effect for links */
+.login-form-container h4:hover,
+.login-form-container div a:last-child:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Style for the "Sign Up" link within h4 element */
+.login-form-container h4 a.sign-up-link {
+    text-decoration: none;
+    color: #1da1f2; 
+}
+
+/* Hover effect for the "Sign Up" link */
+.login-form-container h4 a.sign-up-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Style for the "Continue as a guest" link */
+.login-form-container div a.guest-link {
+    text-decoration: none;
+    color: #1da1f2; 
+    display: block; /* Set to block to allow text-align to work */
+    text-align: center; /* Center-align the text */
+    margin-top: 10px; /* Adjust the top margin as needed */
+}
+
+/* Hover effect for the "Continue as a guest" link */
+.login-form-container div a.guest-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Style for the "Forgotten password?" link */
+.login-form-container div a.forgot-password-link {
+    text-decoration: none;
+    color: #1da1f2; 
+    display: block; /* Set to block to allow text-align to work */
+    margin-bottom: 15px; /* Adjust the bottom margin as needed */
+}
+
+/* Hover effect for the "Forgotten password?" link */
+.login-form-container div a.forgot-password-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}

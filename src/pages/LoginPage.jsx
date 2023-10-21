@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import { loginUserService } from '../services/auth';
+import '../styles/pages/LoginPage.css'
 
 // LoginPage component provides a form for users to log in.
 // Users can enter their email and password to log in, or they can navigate to the registration page.
@@ -30,7 +31,7 @@ const LoginPage = () => {
     };
 
     return (
-        <section className="login-form">
+        <section className="login-form-container">
             <h2>Hey, Welcome back...</h2>
             <h3>
                 Don’t have an account?{' '}
@@ -62,18 +63,18 @@ const LoginPage = () => {
                 </fieldset>
                 <div>
                     <div>
-                        <Link to="/password-recovery">Forgotten password?</Link>
+                        <Link to="/password-recovery" className='forgot-password-link'>Forgotten password?</Link>
                     </div>
                 </div>
-                <button>Login</button>
-                {error ? <p>{error}</p> : null}
+                <button className="register-button">Login</button>
+                {error ? <p className="error-message">{error}</p> : null}
             </form>
 
             <div>
                 <h4>
-                    Don’t have an account? <Link to="/register">Sign Up</Link>
+                    <Link to="/register" className="sign-up-link"> Don’t have an account? Sign Up</Link>
                 </h4>
-                <Link to="/home">Continue as a guest</Link>
+                <Link to="/home" className="guest-link">Continue as a guest</Link>
             </div>
         </section>
     );

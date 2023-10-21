@@ -1,14 +1,7 @@
 /* Styles for the registration form */
 
 /* Center-align the entire section and add some padding */
-.register-from{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.login-form{
+.register-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,26 +9,26 @@
 }
 
 /* Style for the main heading */
-h1 {
+.register-form h1 {
   font-size: 24px;
   margin-bottom: 20px;
   color: #1da1f2; /* Blue color for the heading */
 }
 
 /* Style for the form container */
-form {
+.register-form form {
   width: 100%;
   max-width: 400px;
 }
 
 /* Style for form fieldsets (grouping of related form elements) */
-fieldset {
+.register-form fieldset {
   margin-bottom: 20px;
   border: none; /* Remove borders around fieldsets */
 }
 
 /* Style for form labels */
-label {
+.register-form label {
   display: block;
   font-size: 16px;
   margin-bottom: 5px;
@@ -43,7 +36,7 @@ label {
 }
 
 /* Style for form input fields */
-input {
+.register-form input {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -55,7 +48,7 @@ input {
 }
 
 /* Style for the form submission button */
-button {
+.register-form button {
   background-color: #1da1f2; /* Blue background color for the button */
   color: #fff; /* White text color */
   padding: 10px 20px;
@@ -66,35 +59,40 @@ button {
 }
 
 /* Hover effect for the button */
-button:hover {
+.register-form button:hover {
   background-color: #0c8de8; /* Darker blue background on hover */
 }
 
 /* Style for paragraphs within the form */
-p {
+.register-form p {
   color: #333; /* Dark gray text color */
   margin-top: 10px;
 }
 
 /* Style for links within h3 elements */
-h3 a {
+.register-form h3 a {
   color: #1da1f2; /* Blue color for links within h3 elements */
   text-decoration: none; /* Remove underline */
 }
 
 /* Hover effect for links within h3 elements */
-h3 a:hover {
+.register-form h3 a:hover {
   text-decoration: underline; /* Underline on hover */
 }
 
 /* Style for regular links */
-a {
+.register-form a {
   color: #1da1f2; /* Blue color for links */
   text-decoration: none; /* Remove underline */
   margin-top: 10px;
 }
 
 /* Hover effect for regular links */
-a:hover {
+.register-form a:hover {
   text-decoration: underline; /* Underline on hover */
+}
+
+/* Style for error messages */
+.error-message {
+  color: #ff0000; /* Red color for error messages */
 }
