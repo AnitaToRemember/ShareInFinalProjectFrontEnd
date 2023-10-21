@@ -1,63 +1,79 @@
-.new-link-from{
-	display: flex;
-	justify-content: center;
+/* NewLink Styles Inspired by Twitter - Mobile First */
+
+.new-link-from {
+display: flex;
+justify-content: center;
 }
+
 .new-link {
-	display: flex;
-	flex-direction: column;
-	border: 1px solid #ccc;
-	margin-top: 4rem;
-	max-width: 600px;
-	border-radius: 8px;
-	padding: 16px;
-	background-color: var(--white);
-	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+display: flex;
+flex-direction: column;
+border: none; /* Remove the border */
+margin-top: 4rem;
+width: 90%;
+max-width: 600px;
+border-radius: 8px;
+padding: 16px;
+background-color: #f5f8fa;
+box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+margin-left: auto;
+margin-right: auto;
 }
 
 .new-link fieldset {
-	margin-bottom: 16px;
+margin-bottom: 16px;
+border: none; /* Remove the border */
 }
 
 .new-link label {
-	display: block;
-	font-weight: bold;
-	margin-bottom: 4px;
+display: block;
+font-weight: bold;
+margin-bottom: 4px;
 }
 
 .new-link input[type="text"],
 .new-link input[type="url"],
 .new-link textarea {
-	width: 100%;
-	padding: 8px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	font-size: 14px;
+width: 100%;
+padding: 8px;
+border: 1px solid #1da1f2;
+border-radius: 4px;
+font-size: 14px;
+background-color: #f5f8fa;
+color: #1da1f2;
 }
 
 .new-link textarea {
-	resize: vertical;
+resize: vertical;
 }
 
 .new-link button.posting-button {
-	background-color: var(--logoText);
-	color: white;
-	border: none;
-	border-radius: 4px;
-	padding: 8px 16px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
+background-color: #1da1f2;
+color: white;
+border: none;
+border-radius: 4px;
+padding: 8px 16px;
+cursor: pointer;
+transition: background-color 0.3s ease;
 }
 
 .new-link button.posting-button:hover {
-	background-color: #00acee; 
+background-color: #0c8de8;
 }
 
 .new-link p {
-	color: #FF0000; 
-	font-size: 14px;
-	margin-top: 8px;
+color: #FF0000;
+font-size: 14px;
+margin-top: 8px;
 }
 
 .new-link p.posting-link {
-	color: var(--logoText); 
+color: #1da1f2;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+.new-link {
+	max-width: 100%;
+}
 }
