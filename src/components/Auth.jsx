@@ -13,7 +13,7 @@ const Auth = () => {
       {user ? (
         // Displaying information for logged-in users
         <section className="logged-user">
-          Logged in as <Link to={`/user/${user.id}`}>{user.username}</Link>{" "}
+          <p>Logged in as <Link to={`/user/${user.id}`}> {user.username} </Link>{" "}  </p>
           <button onClick={() => logout()}>Logout</button>
         </section>
       ) : (

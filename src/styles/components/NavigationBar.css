@@ -35,3 +35,10 @@
 .nav-item:hover {
   text-decoration: underline;
 }
+
+/* Media query to hide the navigation bar for screens wider than 600px */
+@media screen and (min-width: 600px) {
+  .navbar {
+      display: none;
+  }
+}

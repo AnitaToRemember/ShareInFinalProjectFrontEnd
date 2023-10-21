@@ -163,3 +163,12 @@ body.dark-mode div.filter-container {
   color: #ffffff;
   border: 1px solid #38444d;
 }
+
+@media screen and (min-width: 600px) {
+
+  /* Media query to move the header logo 4rem to the right */
+  .switch-mode-container {
+    margin-left: 4rem;
+  }
+
+}

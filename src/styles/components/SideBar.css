@@ -1,0 +1,38 @@
+/* Sidebar Styles */
+.sidebar {
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    .sidebar {
+        display: block;
+        position: fixed;
+        top: 5.2rem;
+        left: 0;
+        height: 100vh;
+        width: 60px;
+        background-color:var(--lightBlue);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .sidebar-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+    }
+
+    .sidebar-item {
+        padding: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .sidebar-item:hover {
+        background-color: #f5f5f5; /* Adjust the hover background color as needed */
+    }
+}

@@ -77,3 +77,13 @@ color: #1da1f2;
 	max-width: 100%;
 }
 }
+
+@media screen and (min-width: 600px) {
+
+	/* Media query to move the header logo 4rem to the right */
+	.new-link-from {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

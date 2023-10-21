@@ -65,3 +65,13 @@
 .error{
   color: red;
 }
+
+@media screen and (min-width: 600px) {
+
+	/* Media query to move the header logo 4rem to the right */
+	.list-all-links {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	}
+}

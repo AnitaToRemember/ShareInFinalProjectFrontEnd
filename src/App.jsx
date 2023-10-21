@@ -16,6 +16,7 @@ import FilterPage from "./pages/FilterPage";
 import PasswordRecoveryPage from "./pages/PasswordRecoveryPage";
 import ChangePasswordPage from "./pages/ChangePasswordPage";
 import SwitchMode from './components/SwitchMode';
+import SideBar from "./components/SideBar";
 
 // Functional component for the main App
 function App() {
@@ -44,6 +45,8 @@ function App() {
       </Routes>
       {/* Conditional rendering of NavigationBar if user is authenticated */}
       {user ? <NavigationBar /> : null}
+      {user ? <SideBar /> : null}
+
     </main>
   );
 }

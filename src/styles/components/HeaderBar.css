@@ -39,3 +39,17 @@ body{
   overflow-x: hidden;
 }
 }
+
+@media screen and (min-width: 600px) {
+  body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+  }
+
+  /* Media query to move the header logo 4rem to the right */
+  .header-logo {
+      margin-left: 4rem;
+  }
+
+}
