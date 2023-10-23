@@ -152,3 +152,21 @@
   text-decoration: none;
   color: inherit;
 }
+
+.about-us {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  padding: 5px;
+  font-size: 14px;
+  z-index: 1001;
+}
+
+.about-us a {
+  text-decoration: none;
+  color: #0093ff;
+}
+
+.about-us a:hover {
+  text-decoration: underline;
+}

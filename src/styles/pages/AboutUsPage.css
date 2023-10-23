@@ -1,0 +1,48 @@
+/* AboutUsPage.css */
+
+.about-us-page {
+padding: 20px;
+}
+
+.about-us-heading {
+color: #1da1f2;
+}
+
+.creators-container {
+display: flex;
+justify-content: center; /* Center the cards horizontally */
+gap: 20px; /* Add some space between the cards */
+}
+
+.creator-card {
+text-align: center;
+}
+
+.creator-profile-pic {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+object-fit: cover;
+margin-bottom: 10px;
+}
+
+.creator-name {
+color:  #1da1f2; 
+}
+
+.creator-description {
+color: #555; 
+}
+
+.social-links {
+margin-top: 10px;
+}
+
+.social-links a {
+margin-right: 10px;
+color: #1da1f2;
+}
+
+.social-links a:hover {
+color: #007bff;
+}
