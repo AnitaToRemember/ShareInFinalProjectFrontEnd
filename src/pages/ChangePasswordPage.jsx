@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { changePasswordService } from '../services/auth';
 import '../styles/pages/RegisterPage.css';
 import Auth from '../components/Auth';
+import Footer from '../components/Footer';
 
 // Define the ChangePasswordPage component
 const ChangePasswordPage = () => {
@@ -95,6 +96,7 @@ const ChangePasswordPage = () => {
             <button>
                 <Link to="/account">Cancel</Link>
             </button>
+        <Footer/>
         </section>
     );
 };

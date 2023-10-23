@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../styles/pages/RegisterPage.css';
 import { registerUserService } from '../services/auth';
+import Footer from '../components/Footer';
 
 // RegisterPage component provides a form for users to create a new account.
 // Users can enter a username, email, and password to register.
@@ -93,6 +94,7 @@ const RegisterPage = () => {
                 </h3>
                 <Link to="/home" className="guest-link">Continue as a guest</Link>
             </div>
+            <Footer/>
         </section>
     );
 };

@@ -4,6 +4,7 @@ import {
 RecoveryByEmailService,
 SendEmailToRecoverPassword,
 } from '../services/passwordRecovery';
+import Footer from '../components/Footer';
 
 function PasswordRecoveryPage() {
 // State to store email, confirmation code, success/error message, etc.
@@ -73,7 +74,7 @@ const handleForm = async (e) => {
 };
 
 return (
-    <div className="password-recovery-page">
+    <section className="password-recovery-page">
     <h1 className="main-heading">Reset your password</h1>
     {showConfirmationForm ? (
         <div>
@@ -157,7 +158,8 @@ return (
         </section>
     ) : null}
     <p className="message">{message}</p>
-    </div>
+    <Footer/>
+    </section>
 );
 }
 

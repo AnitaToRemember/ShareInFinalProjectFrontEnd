@@ -4,6 +4,7 @@ import UserLinks from '../components/UserLinks';
 import '../styles/pages/MyLinks.css';
 import Auth from '../components/Auth';
 import { getUserLinksService } from '../services/links';
+import Footer from '../components/Footer';
 
 // Functional component for MyLinks page
 function MyLinks() {
@@ -39,7 +40,7 @@ function MyLinks() {
 
     // JSX for rendering MyLinks page
     return (
-        <div>
+        <section>
             {/* Header section with authentication component */}
             <header>
                 <Auth />
@@ -64,7 +65,8 @@ function MyLinks() {
                     ))}
                 </div>
             )}
-        </div>
+            <Footer/>
+        </section>
     );
 }
 

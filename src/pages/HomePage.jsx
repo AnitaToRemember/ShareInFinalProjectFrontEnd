@@ -6,6 +6,7 @@ import Loading from '../components/Loading';
 import ErrorMessage from '../components/ErrorMessage';
 import LinkPost from '../components/LinkPost';
 import Auth from '../components/Auth';
+import Footer from '../components/Footer';
 
 // Functional component for the HomePage
 function HomePage() {
@@ -33,6 +34,7 @@ function HomePage() {
 					<LinkPost key={link.id} link={link} removeLink={removeLink} />
 				))}
 			</section>
+			<Footer/>
 		</main>
 	);
 }

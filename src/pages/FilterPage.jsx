@@ -3,6 +3,7 @@ import useFilteredPosts from '../hooks/useFilteredPosts';
 import LinkPost from '../components/LinkPost';
 import '../styles/pages/FilterPage.css';
 import Auth from '../components/Auth';
+import Footer from '../components/Footer';
 
 // Functional component for the FilterPage
 function FilterPage() {
@@ -15,7 +16,7 @@ function FilterPage() {
 
     // JSX for rendering the FilterPage
     return (
-        <div className="filter-container">
+        <section className="filter-container">
             {/* Header section with authentication component */}
             <header>
                 <Auth />
@@ -64,7 +65,8 @@ function FilterPage() {
                     ))}
                 </ul>
             )}
-        </div>
+            <Footer/>
+        </section>
     );
 }
 
