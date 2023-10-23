@@ -13,14 +13,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 8rem;
+        margin-left: 4rem;
 	}
 
     .user-title{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 4rem;
+        margin-left: 8rem;
 
     }
 }
