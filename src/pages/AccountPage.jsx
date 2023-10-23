@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import '../styles/pages/AccountPage.css';
 import Auth from '../components/Auth';
 import { uploadAvatar } from '../services/user';
+import Footer from '../components/Footer';
 
 // AccountPage component represents the user's account page.
 // It displays profile information, including the user's avatar, username, and email.
@@ -55,7 +56,8 @@ const AccountPage = () => {
     };
 
     return (
-        <section className="account">
+        <>
+        <main className="account">
             <header>
                 {/* Display authentication status */}
                 <Auth />
@@ -113,7 +115,9 @@ const AccountPage = () => {
                     <Link to="/change-password">Change Password</Link>
                 </button>
             </div>
-        </section>
+            </main>
+            <Footer/>
+        </>
     );
 };
 

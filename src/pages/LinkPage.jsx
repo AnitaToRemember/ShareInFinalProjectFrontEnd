@@ -3,6 +3,7 @@ import useOneLink from '../hooks/useOneLink';
 import LinkPost from '../components/LinkPost';
 import Loading from '../components/Loading';
 import ErrorMessage from '../components/ErrorMessage';
+import Footer from '../components/Footer';
 
 // Functional component for the LinkPage
 function LinkPage() {
@@ -22,6 +23,7 @@ function LinkPage() {
             <h1>Tweet</h1>
             {/* Rendering the LinkPost component for the single link */}
             <LinkPost link={link} />
+            <Footer/>
         </section>
     );
 }

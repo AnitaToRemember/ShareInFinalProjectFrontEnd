@@ -1,10 +1,13 @@
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Link } from "react-router-dom"
+import '../styles/components/Footer.css'
+
 const Footer = () => {
     
 
     return (
-        <Footer>
-            <h3>Copyright © 2023 ShareIn. All rights reserved.</h3>
-        </Footer>
+        <footer className='about-us'><Link to={'/about-us'}><FontAwesomeIcon icon={faCircleInfo} size="2xl" style={{ color: "#0093ff" }} /> </Link></footer>
     )
 }
 

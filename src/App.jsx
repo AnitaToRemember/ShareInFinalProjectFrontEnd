@@ -17,6 +17,7 @@ import PasswordRecoveryPage from "./pages/PasswordRecoveryPage";
 import ChangePasswordPage from "./pages/ChangePasswordPage";
 import SwitchMode from './components/SwitchMode';
 import SideBar from "./components/SideBar";
+import AboutUsPage from "./pages/AboutUsPage";
 
 // Functional component for the main App
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Route path="/filter" element={<FilterPage />} />
         <Route path="/links/:id" element={<LinkPage />} />
         <Route path="/account" element={<AccountPage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/change-password" element={<ChangePasswordPage />} />
         <Route path="/password-recovery" element={<PasswordRecoveryPage />} />
         <Route path="*" element={<NotFoundPage />} />

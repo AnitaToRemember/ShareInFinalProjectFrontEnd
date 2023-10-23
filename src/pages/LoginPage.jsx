@@ -4,6 +4,7 @@ import { AuthContext } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import { loginUserService } from '../services/auth';
 import '../styles/pages/LoginPage.css'
+import Footer from '../components/Footer';
 
 // LoginPage component provides a form for users to log in.
 // Users can enter their email and password to log in, or they can navigate to the registration page.
@@ -76,6 +77,7 @@ const LoginPage = () => {
                 </h4>
                 <Link to="/home" className="guest-link">Continue as a guest</Link>
             </div>
+            <Footer/>
         </section>
     );
 };
