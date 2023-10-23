@@ -3,6 +3,7 @@ import { AuthContext } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
 import { changePasswordService } from '../services/auth';
 import '../styles/pages/RegisterPage.css';
+import Auth from '../components/Auth';
 
 // Define the ChangePasswordPage component
 const ChangePasswordPage = () => {
@@ -42,11 +43,17 @@ const ChangePasswordPage = () => {
     // Render the ChangePasswordPage component
     return (
         <section className="password-recovery-page">
+            {/* Header section with authentication component */}
+            <header>
+                <Auth />
+            </header>
+
             <h1>Change your password here</h1>
             <form onSubmit={handleForm}>
                 <fieldset>
-                    <label>Old Password </label>
+                    <label className='change-password-label'>Old Password </label>
                     <input
+                        className='recovery-input'
                         type="password"
                         id="oldPass"
                         name="oldPass"
@@ -57,8 +64,9 @@ const ChangePasswordPage = () => {
                 </fieldset>
 
                 <fieldset>
-                    <label>New password </label>
+                    <label className='change-password-label'>New password </label>
                     <input
+                        className='recovery-input'
                         type="password"
                         id="pass1"
                         name="pass1"
@@ -69,8 +77,9 @@ const ChangePasswordPage = () => {
                 </fieldset>
 
                 <fieldset>
-                    <label>Repeat new password </label>
+                    <label className='change-password-label'>Repeat new password </label>
                     <input
+                        className='recovery-input'
                         type="password"
                         id="pass2"
                         name="pass2"

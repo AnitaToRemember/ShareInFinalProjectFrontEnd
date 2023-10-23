@@ -1,4 +1,8 @@
 /* Auth Styles */
+ul.access-buttons{
+	margin: 0;
+	padding-right: 1rem;
+}
 .auth-container {
 	position: fixed;
 	top: 10px;

@@ -43,6 +43,11 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 body {
   margin: 0;
   place-items: center;
