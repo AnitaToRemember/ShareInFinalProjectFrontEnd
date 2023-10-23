@@ -41,6 +41,7 @@
 .link-post .url {
   font-size: 14px;
   margin: 0;
+  color: var(--logoText);
 }
 
 .link-post .description {
