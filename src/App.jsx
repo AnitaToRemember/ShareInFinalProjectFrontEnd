@@ -1,6 +1,8 @@
 // Importing CSS and necessary components and hooks
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 import HomePage from "./pages/HomePage";
 import MyLinks from "./pages/MyLinks";
 import HeaderBar from "./components/HeaderBar";
@@ -9,8 +11,6 @@ import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import AccountPage from "./pages/AccountPage";
 import LinkPage from "./pages/LinkPage";
-import { useContext } from "react";
-import { AuthContext } from "./context/AuthContext";
 import FilterPage from "./pages/FilterPage";
 import PasswordRecoveryPage from "./pages/PasswordRecoveryPage";
 import ChangePasswordPage from "./pages/ChangePasswordPage";
