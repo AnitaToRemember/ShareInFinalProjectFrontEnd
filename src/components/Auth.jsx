@@ -13,8 +13,8 @@ const Auth = () => {
       {user ? (
         // Displaying information for logged-in users
         <section className="logged-user">
-          <p>Logged in as <Link to={`/account`}> {user.username} </Link>{" "}  </p>
-          <button onClick={() => logout()}>Logout</button>
+          <p className="logged-as"> Logged in as <Link to={`/account`}> {user.username} </Link>{" "}  </p>
+          <button className="loggout-button" onClick={() => logout()}>Logout</button>
         </section>
       ) : (
       // Displaying options for not logged-in users

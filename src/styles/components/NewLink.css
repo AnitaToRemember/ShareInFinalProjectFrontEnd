@@ -3,13 +3,14 @@
 .new-link-from {
 display: flex;
 justify-content: center;
+align-content: center;
 }
 
 .new-link {
 display: flex;
 flex-direction: column;
-border: none; /* Remove the border */
-margin-top: 4rem;
+border: none; 
+margin-top: 2rem;
 width: 90%;
 max-width: 600px;
 border-radius: 8px;
@@ -79,11 +80,22 @@ color: #1da1f2;
 }
 
 @media screen and (min-width: 600px) {
-
-	/* Media query to move the header logo 4rem to the right */
 	.new-link-from {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
+
+	.new-link {
+		margin: 0;
+		}
+}
+
+@media screen and (max-width: 600px) {
+	.new-link {
+		margin: 0 2rem 0 0;
+		padding: 0;
+		border: 0;
+		width: 80%;
+		}
 }
