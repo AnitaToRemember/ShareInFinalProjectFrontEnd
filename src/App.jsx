@@ -17,7 +17,7 @@ import ChangePasswordPage from "./pages/ChangePasswordPage";
 import SwitchMode from './components/SwitchMode';
 import SideBar from "./components/SideBar";
 import AboutUsPage from "./pages/AboutUsPage";
-import NotFoundPage from "./pages/notFoundPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 
 // Functional component for the main App
