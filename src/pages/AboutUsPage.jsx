@@ -21,7 +21,7 @@ const AboutUsPage = () => {
         {/* Creator 2 */}
         <CreatorCard
             name="Evelin"
-            description="Co-founder and Designer"
+            description="Co-founder and Developer"
             imageUrl='/src/assets/evelin.png'
             linkedinUrl="https://www.linkedin.com/in/evelinarboleda/"
             githubUrl="https://github.com/EveArbol"
