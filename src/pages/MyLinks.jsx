@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../context/AuthContext';
-import UserLinks from '../components/UserLinks';
 import '../styles/pages/MyLinks.css';
 import Auth from '../components/Auth';
 import { getUserLinksService } from '../services/links';
 import Footer from '../components/Footer';
+import LinkList from '../components/LinkList';
 
 // Functional component for MyLinks page
 function MyLinks() {
@@ -58,11 +58,8 @@ function MyLinks() {
                             : 'Please log in to see your links.'}
                     </h2>
                     {/* Mapping over user posts and rendering UserLinks component for each link */}
-                    {userPosts.map((link) => (
-                        <li key={link.id} className="user-link">
-                            <UserLinks token={token} />
-                        </li>
-                    ))}
+                    {/* Directly render LinkList component with userPosts */}
+                    <LinkList links={userPosts} />
                 </div>
             )}
             <Footer/>
