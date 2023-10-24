@@ -5,7 +5,6 @@ import HomePage from "./pages/HomePage";
 import MyLinks from "./pages/MyLinks";
 import HeaderBar from "./components/HeaderBar";
 import NavigationBar from "./components/NavigationBar";
-import NotFoundPage from "./pages/notFoundPage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
 import AccountPage from "./pages/AccountPage";
@@ -18,6 +17,7 @@ import ChangePasswordPage from "./pages/ChangePasswordPage";
 import SwitchMode from './components/SwitchMode';
 import SideBar from "./components/SideBar";
 import AboutUsPage from "./pages/AboutUsPage";
+import NotFoundPage from "./pages/notFoundPage";
 
 // Functional component for the main App
 function App() {

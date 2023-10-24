@@ -74,3 +74,19 @@ ul.access-buttons{
 	}
 
 }
+
+@media screen and (min-width: 600px) {
+
+	.logged-user {
+		padding: 0.5rem 4rem 0 0  ;
+	}
+
+	.logged-as{
+		padding: 1rem;
+	}
+
+	.loggout-button{
+		margin: 0 2rem 1rem 0;
+	}
+
+}
