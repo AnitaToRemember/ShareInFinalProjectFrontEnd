@@ -35,7 +35,7 @@ function StarRating({ value, linkId, link }) {
       setSelectedValue(clickedValue);
     } catch (error) {
       // Set an error message in case of voting failure
-      setErrorMessage("Error while voting:", error);
+      setErrorMessage(error.message);
     }
   };
 
