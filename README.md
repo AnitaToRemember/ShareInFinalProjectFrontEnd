@@ -76,4 +76,4 @@ npm  run dev
 The app will be available in your browser at http://localhost:8000/.
 
 ## License
-This project is licensed under the [MIT License](https://opensource.org/license/mit/).
+This project is licensed under the [MIT License](https://opensource.org/license/mit/)
