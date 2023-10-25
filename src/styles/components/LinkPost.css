@@ -38,9 +38,10 @@
   color: #000000;
 }
 
-.link-post .url {
+.link-url {
+  display: flex;
+  flex-wrap: wrap;
   font-size: 14px;
-  margin: 0;
   color: var(--logoText);
 }
 
@@ -74,5 +75,13 @@
 	display: flex;
   justify-content: center;
   align-items: center;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.list-all-links {
+		padding: 0;
+		border: 0;
+		width: 80%;
 	}
 }

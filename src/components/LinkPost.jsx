@@ -36,7 +36,7 @@ function LinkPost({ link, removeLink }) {
 
         {/* Creating a link to the URL with the provided URL */}
         <Link to={link.url} className="url"> 
-          URL: {link.url}
+          <p className="link-url">URL: {link.url}</p>
         </Link>
 
         {/* Displaying the link description */}

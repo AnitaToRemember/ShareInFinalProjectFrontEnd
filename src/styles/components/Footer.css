@@ -15,3 +15,9 @@ color: #0093ff;
 .about-us a:hover {
 text-decoration: underline;
 }
+
+@media screen and (max-width: 600px) {
+	.about-us {
+        display: none;
+	}
+}

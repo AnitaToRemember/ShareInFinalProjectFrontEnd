@@ -80,3 +80,14 @@
   background-color: #f9f9f9;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+@media screen and (max-width: 600px) {
+
+	/* Media query to move the header logo 4rem to the right */
+	.filter-container {
+    margin-top: 0;
+		padding: 0;
+		border: 0;
+		width: 80%;
+	}
+}
