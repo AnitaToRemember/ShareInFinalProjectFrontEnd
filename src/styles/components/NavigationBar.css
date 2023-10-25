@@ -17,6 +17,7 @@
   font-weight: 800;
   color: var(--logoText);
   background-color: var(--lightBlue);
+  z-index: 1001;
   }
 
   
@@ -42,9 +43,3 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-	.navbar {
-    bottom: 0;
-    position:sticky;
-		}
-}

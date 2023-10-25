@@ -82,8 +82,6 @@
 }
 
 @media screen and (max-width: 600px) {
-
-	/* Media query to move the header logo 4rem to the right */
 	.filter-container {
     margin-top: 0;
 		padding: 0;
