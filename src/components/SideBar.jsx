@@ -13,10 +13,10 @@ const Sidebar = () => {
     return (
         <aside className="sidebar">
             <ul className="sidebar-list">
-                <li className="sidebar-item"><Link to={homeLink}><FontAwesomeIcon icon={faHouse} size="2x" style={{ color: "#0093ff" }} /></Link></li>
-                <li className="sidebar-item"><Link to="/mylinks"><FontAwesomeIcon icon={faLink} size="2x" style={{ color: "#0093ff" }} /></Link></li>
-                <li className="sidebar-item"><Link to="/filter"><FontAwesomeIcon icon={faSort} size="2x" style={{ color: "#0093ff" }} /></Link></li>
-                <li className="sidebar-item"><Link to="/account"><FontAwesomeIcon icon={faUser} size="2x" style={{ color: "#0093ff" }} /></Link></li>
+                <li className="sidebar-item"><Link to={homeLink}><FontAwesomeIcon icon={faHouse}  /></Link></li>
+                <li className="sidebar-item"><Link to="/mylinks"><FontAwesomeIcon icon={faLink} /></Link></li>
+                <li className="sidebar-item"><Link to="/filter"><FontAwesomeIcon icon={faSort}  /></Link></li>
+                <li className="sidebar-item"><Link to="/account"><FontAwesomeIcon icon={faUser}  /></Link></li>
             </ul>
         </aside>
     );

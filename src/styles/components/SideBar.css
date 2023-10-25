@@ -29,10 +29,6 @@
     .sidebar-item {
         padding: 20px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .sidebar-item:hover {
-        background-color: #f5f5f5; /* Adjust the hover background color as needed */
+        font-size: 40px;
     }
 }
