@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&family=Outfit:wght@100;500;700;900&display=swap');
 
 #root {
-  max-width: 100vw;
+  max-width: 1280px;
   margin: 0;
   padding: 2rem;
   text-align: center;
